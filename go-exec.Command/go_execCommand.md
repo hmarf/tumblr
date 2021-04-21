@@ -37,6 +37,7 @@ func main() {
 
 ## 準備されたコマンドを実行
 exec.Cmdにはいろいろ用意されている
+
 - Run()
 - Start()
 - String()
@@ -75,8 +76,9 @@ result := string([]byte)
 result := string([]byte)
 ```
 
-### Start()
+### Start(), StderrPipe(), StdinPipe(), StdoutPipe()
 コマンドの終了を待たない。単体で使うよりも `Cmd.Wait()` と組み合わせて使うことが多いと思う。`Cmd.Wait()`でコマンドの終了を待ってくれるのでリアルタイムで標準出力などを検知することができる。（使い勝手がいい子）
+コマンドの出力をリアタイで出力するプログラムを載せとく。
 ```
 package main
 
